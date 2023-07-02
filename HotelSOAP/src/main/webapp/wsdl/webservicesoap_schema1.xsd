@@ -1,0 +1,99 @@
+<xs:schema xmlns:tns="http://server.soap.project/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://server.soap.project/" version="1.0">
+  <xs:element name="checkRoomsAtDate" type="tns:checkRoomsAtDate"/>
+  <xs:element name="checkRoomsAtDateResponse" type="tns:checkRoomsAtDateResponse"/>
+  <xs:element name="listRooms" type="tns:listRooms"/>
+  <xs:element name="listRoomsResponse" type="tns:listRoomsResponse"/>
+  <xs:element name="listUserReservedRooms" type="tns:listUserReservedRooms"/>
+  <xs:element name="listUserReservedRoomsResponse" type="tns:listUserReservedRoomsResponse"/>
+  <xs:element name="loginAccount" type="tns:loginAccount"/>
+  <xs:element name="loginAccountResponse" type="tns:loginAccountResponse"/>
+  <xs:element name="removeReservation" type="tns:removeReservation"/>
+  <xs:element name="removeReservationResponse" type="tns:removeReservationResponse"/>
+  <xs:element name="reserveRoom" type="tns:reserveRoom"/>
+  <xs:element name="reserveRoomResponse" type="tns:reserveRoomResponse"/>
+  <xs:element name="setupAccount" type="tns:setupAccount"/>
+  <xs:element name="setupAccountResponse" type="tns:setupAccountResponse"/>
+  <xs:complexType name="setupAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setupAccountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginAccountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listUserReservedRooms">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listUserReservedRoomsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checkRoomsAtDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="checkRoomsAtDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserveRoom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reserveRoomResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listRooms">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="listRoomsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeReservationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

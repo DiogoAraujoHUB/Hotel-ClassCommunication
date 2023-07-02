@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="WebServiceSoapService" targetNamespace="http://server.soap.project/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://server.soap.project/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://server.soap.project/" schemaLocation="webservicesoap_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="setupAccount">
+    <wsdl:part name="parameters" element="tns:setupAccount">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveRoomResponse">
+    <wsdl:part name="parameters" element="tns:reserveRoomResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listRoomsResponse">
+    <wsdl:part name="parameters" element="tns:listRoomsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setupAccountResponse">
+    <wsdl:part name="parameters" element="tns:setupAccountResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listUserReservedRoomsResponse">
+    <wsdl:part name="parameters" element="tns:listUserReservedRoomsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkRoomsAtDateResponse">
+    <wsdl:part name="parameters" element="tns:checkRoomsAtDateResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginAccount">
+    <wsdl:part name="parameters" element="tns:loginAccount">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginAccountResponse">
+    <wsdl:part name="parameters" element="tns:loginAccountResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeReservationResponse">
+    <wsdl:part name="parameters" element="tns:removeReservationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part name="Exception" element="tns:Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listUserReservedRooms">
+    <wsdl:part name="parameters" element="tns:listUserReservedRooms">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkRoomsAtDate">
+    <wsdl:part name="parameters" element="tns:checkRoomsAtDate">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveRoom">
+    <wsdl:part name="parameters" element="tns:reserveRoom">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listRooms">
+    <wsdl:part name="parameters" element="tns:listRooms">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeReservation">
+    <wsdl:part name="parameters" element="tns:removeReservation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="setupAccount">
+      <wsdl:input name="setupAccount" message="tns:setupAccount">
+    </wsdl:input>
+      <wsdl:output name="setupAccountResponse" message="tns:setupAccountResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loginAccount">
+      <wsdl:input name="loginAccount" message="tns:loginAccount">
+    </wsdl:input>
+      <wsdl:output name="loginAccountResponse" message="tns:loginAccountResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listUserReservedRooms">
+      <wsdl:input name="listUserReservedRooms" message="tns:listUserReservedRooms">
+    </wsdl:input>
+      <wsdl:output name="listUserReservedRoomsResponse" message="tns:listUserReservedRoomsResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkRoomsAtDate">
+      <wsdl:input name="checkRoomsAtDate" message="tns:checkRoomsAtDate">
+    </wsdl:input>
+      <wsdl:output name="checkRoomsAtDateResponse" message="tns:checkRoomsAtDateResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reserveRoom">
+      <wsdl:input name="reserveRoom" message="tns:reserveRoom">
+    </wsdl:input>
+      <wsdl:output name="reserveRoomResponse" message="tns:reserveRoomResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listRooms">
+      <wsdl:input name="listRooms" message="tns:listRooms">
+    </wsdl:input>
+      <wsdl:output name="listRoomsResponse" message="tns:listRoomsResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeReservation">
+      <wsdl:input name="removeReservation" message="tns:removeReservation">
+    </wsdl:input>
+      <wsdl:output name="removeReservationResponse" message="tns:removeReservationResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoapServiceSoapBinding" type="tns:WebServiceSoap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="setupAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setupAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setupAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loginAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="loginAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listUserReservedRooms">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listUserReservedRooms">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listUserReservedRoomsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkRoomsAtDate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="checkRoomsAtDate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkRoomsAtDateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reserveRoom">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reserveRoom">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reserveRoomResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="listRooms">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listRooms">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listRoomsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeReservation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeReservation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeReservationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceSoapService">
+    <wsdl:port name="WebServiceSoapPort" binding="tns:WebServiceSoapServiceSoapBinding">
+      <soap:address location="http://localhost:8090/HotelSOAP/services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
