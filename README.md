@@ -1,6 +1,4 @@
-# Java-HotelCommunication
-
-## 
+## Project Details
 Made for the "Computação Distribuida" class, in Universidade Lusófona, as its final project.
 Made by: Diogo Araújo - 21905661
 
